@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/rogerDesignDev/react-introstatic/css/main.afd7172b.chunk.css",
-    "main.js": "/rogerDesignDev/react-introstatic/js/main.d7243ed2.chunk.js",
-    "main.js.map": "/rogerDesignDev/react-introstatic/js/main.d7243ed2.chunk.js.map",
-    "runtime-main.js": "/rogerDesignDev/react-introstatic/js/runtime-main.c5dcfe71.js",
-    "runtime-main.js.map": "/rogerDesignDev/react-introstatic/js/runtime-main.c5dcfe71.js.map",
-    "static/js/2.9ce72592.chunk.js": "/rogerDesignDev/react-introstatic/js/2.9ce72592.chunk.js",
-    "static/js/2.9ce72592.chunk.js.map": "/rogerDesignDev/react-introstatic/js/2.9ce72592.chunk.js.map",
-    "index.html": "/rogerDesignDev/react-introindex.html",
-    "static/css/main.afd7172b.chunk.css.map": "/rogerDesignDev/react-introstatic/css/main.afd7172b.chunk.css.map",
-    "static/js/2.9ce72592.chunk.js.LICENSE.txt": "/rogerDesignDev/react-introstatic/js/2.9ce72592.chunk.js.LICENSE.txt",
-    "static/media/logo.6c099ca5.svg": "/rogerDesignDev/react-introstatic/media/logo.6c099ca5.svg",
-    "static/media/task.a3abd450.svg": "/rogerDesignDev/react-introstatic/media/task.a3abd450.svg"
+    "main.css": "/rogerDesignDev/react-intro/static/css/main.afd7172b.chunk.css",
+    "main.js": "/rogerDesignDev/react-intro/static/js/main.d7243ed2.chunk.js",
+    "main.js.map": "/rogerDesignDev/react-intro/static/js/main.d7243ed2.chunk.js.map",
+    "runtime-main.js": "/rogerDesignDev/react-intro/static/js/runtime-main.231cb523.js",
+    "runtime-main.js.map": "/rogerDesignDev/react-intro/static/js/runtime-main.231cb523.js.map",
+    "static/js/2.9ce72592.chunk.js": "/rogerDesignDev/react-intro/static/js/2.9ce72592.chunk.js",
+    "static/js/2.9ce72592.chunk.js.map": "/rogerDesignDev/react-intro/static/js/2.9ce72592.chunk.js.map",
+    "index.html": "/rogerDesignDev/react-intro/index.html",
+    "static/css/main.afd7172b.chunk.css.map": "/rogerDesignDev/react-intro/static/css/main.afd7172b.chunk.css.map",
+    "static/js/2.9ce72592.chunk.js.LICENSE.txt": "/rogerDesignDev/react-intro/static/js/2.9ce72592.chunk.js.LICENSE.txt",
+    "static/media/logo.6c099ca5.svg": "/rogerDesignDev/react-intro/static/media/logo.6c099ca5.svg",
+    "static/media/task.a3abd450.svg": "/rogerDesignDev/react-intro/static/media/task.a3abd450.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c5dcfe71.js",
+    "static/js/runtime-main.231cb523.js",
     "static/js/2.9ce72592.chunk.js",
     "static/css/main.afd7172b.chunk.css",
     "static/js/main.d7243ed2.chunk.js"
