@@ -80,6 +80,15 @@ const useStyles = makeStyles((theme) => ({
     }
   },
 
+  taskResultNoitem: {
+    alignItems: 'center',
+    minHeight: '19.2rem',
+
+    '& $taskResultParagraph': {
+      margin: 0,
+    }
+  },
+
   taskResultParagraph: {
     marginBottom: '3rem',
     textAlign: 'center',
@@ -107,7 +116,15 @@ function Content() {
       <Box className={classes.wrapper}>
         <TodoSearch />
 
-        <Box className={classes.taskResult}>
+        <Box
+          className={
+            !loading && !searchedTodos?.length ? (
+              classes.taskResult + " " + classes.taskResultNoitem
+            ) : (
+              classes.taskResult
+            )
+          }
+        >
           {searchedTodos?.length === 0 ? (
             <Typography className={classes.taskResultParagraph} component={'p'}>
               {error && <>Hubo un <strong>error</strong>...</>}
@@ -128,17 +145,23 @@ function Content() {
               </TodoList>
             </>
           ) : (
-            <TodoList>
-              {searchedTodos.map((todo, idx) => (
-                <TodoItem
-                  key={todo?.text + idx}
-                  text={todo?.text}
-                  completed={todo?.completed}
-                  onComplete={() => completeTodo(todo?.text)}
-                  onDelete={() => deleteTodo(todo?.text)}
-                />
-              ))}
-            </TodoList>
+            <>
+              {!loading && !searchedTodos?.length ? (
+                <></>
+              ) : (
+                <TodoList>
+                  {searchedTodos.map((todo, idx) => (
+                    <TodoItem
+                      key={todo?.text + idx}
+                      text={todo?.text}
+                      completed={todo?.completed}
+                      onComplete={() => completeTodo(todo?.text)}
+                      onDelete={() => deleteTodo(todo?.text)}
+                    />
+                  ))}
+                </TodoList>
+              )}
+            </>
           )}
         </Box>
 
