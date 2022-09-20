@@ -59,6 +59,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 'auto',
     [theme.breakpoints.up('md')]: {
       marginLeft: 'auto',
+      marginRight: 0,
     },
   },
 
