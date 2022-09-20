@@ -106,7 +106,7 @@ function TodoItem(props) {
       {loading ? (
         <>
           <Skeleton className={classes.button} variant="circular" width={24} height={24} />
-          <Skeleton className={classes.paragrapy} variant="rounded" width={210} height={24} />
+          <Skeleton className={classes.paragrapy} variant="rounded" width={150} height={24} />
           <Skeleton className={classes.delete} variant="circular" width={24} height={24} />
         </>
       ) : (

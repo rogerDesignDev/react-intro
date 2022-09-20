@@ -18,13 +18,16 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundPosition: '90% bottom',
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'contain',
+    backgroundSize: '12rem',
     width: '100%',
+    [theme.breakpoints.up('md')]: {
+      backgroundSize: 'contain',
+    },
   },
 
   wrapper: {
     width: '100%',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       marginLeft: 'auto',
       marginRight: 'auto',
       maxWidth: '60rem',
@@ -100,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('md')]: {
       maxWidth: '39rem',
     },
-  }
+  },
  }));
 
 function TodoSearch() {

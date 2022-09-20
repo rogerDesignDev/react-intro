@@ -24,27 +24,27 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     display: 'flex',
     flexWrap: 'wrap',
+    paddingLeft: '2rem',
+    paddingRight: '2rem',
     width: '100%',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       marginLeft: 'auto',
       marginRight: 'auto',
       maxWidth: '60rem',
+      paddingLeft: 0,
+      paddingRight: 0,
     },
   },
 
   logo: {
+    maxWidth: '12.5rem',
     width: '100%',
-    [theme.breakpoints.up('md')]: {
-      maxWidth: '12.5rem',
-    },
   },
 
   date: {
     alignItems: 'center',
     display: 'flex',
-    [theme.breakpoints.up('md')]: {
-      marginLeft: 'auto',
-    },
+    marginLeft: 'auto',
   },
 }));
 

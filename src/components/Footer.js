@@ -19,11 +19,15 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     display: 'flex',
     flexWrap: 'wrap',
+    paddingLeft: '2rem',
+    paddingRight: '2rem',
     width: '100%',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       marginLeft: 'auto',
       marginRight: 'auto',
       maxWidth: '60rem',
+      paddingLeft: 0,
+      paddingRight: 0,
     },
   },
 
@@ -37,6 +41,14 @@ const useStyles = makeStyles((theme) => ({
 
   copy: {
     fontSize: '1.5rem',
+    width: '100%',
+    textAlign: 'center',
+    marginBottom: '1.6rem',
+    [theme.breakpoints.up('md')]: {
+      marginBottom: 0,
+      textAlign: 'letf',
+      width: 'auto',
+    },
   },
 
   social: {
@@ -44,6 +56,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'wrap',
     marginLeft: 'auto',
+    marginRight: 'auto',
+    [theme.breakpoints.up('md')]: {
+      marginLeft: 'auto',
+    },
   },
 
   link: {
