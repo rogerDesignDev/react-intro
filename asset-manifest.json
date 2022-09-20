@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/rogerDesignDev/api-rest-landingstatic/css/main.afd7172b.chunk.css",
+    "main.js": "/rogerDesignDev/api-rest-landingstatic/js/main.d7243ed2.chunk.js",
+    "main.js.map": "/rogerDesignDev/api-rest-landingstatic/js/main.d7243ed2.chunk.js.map",
+    "runtime-main.js": "/rogerDesignDev/api-rest-landingstatic/js/runtime-main.70db0ae0.js",
+    "runtime-main.js.map": "/rogerDesignDev/api-rest-landingstatic/js/runtime-main.70db0ae0.js.map",
+    "static/js/2.9ce72592.chunk.js": "/rogerDesignDev/api-rest-landingstatic/js/2.9ce72592.chunk.js",
+    "static/js/2.9ce72592.chunk.js.map": "/rogerDesignDev/api-rest-landingstatic/js/2.9ce72592.chunk.js.map",
+    "index.html": "/rogerDesignDev/api-rest-landingindex.html",
+    "static/css/main.afd7172b.chunk.css.map": "/rogerDesignDev/api-rest-landingstatic/css/main.afd7172b.chunk.css.map",
+    "static/js/2.9ce72592.chunk.js.LICENSE.txt": "/rogerDesignDev/api-rest-landingstatic/js/2.9ce72592.chunk.js.LICENSE.txt",
+    "static/media/logo.6c099ca5.svg": "/rogerDesignDev/api-rest-landingstatic/media/logo.6c099ca5.svg",
+    "static/media/task.a3abd450.svg": "/rogerDesignDev/api-rest-landingstatic/media/task.a3abd450.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.70db0ae0.js",
+    "static/js/2.9ce72592.chunk.js",
+    "static/css/main.afd7172b.chunk.css",
+    "static/js/main.d7243ed2.chunk.js"
+  ]
+}
