@@ -1,0 +1,12 @@
+{
+  "ignore": {
+    "@mui/material": {
+      "versions": "",
+      "reason": ""
+    },
+    "@testing-library/jest-dom": {
+      "versions": "5.16.5",
+      "reason": ""
+    }
+  }
+}
