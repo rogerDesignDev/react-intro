@@ -124,71 +124,71 @@ function HomeView() {
     <Box className={classes.root}>
       <Header />
 
-    <Box className={classes.main} component={'main'}>
-      <Box className={classes.wrapper}>
-        <TodoSearch
-          searchValue={searchValue}
-          setSearchValue={setSearchValue}
-        />
+      <Box className={classes.main} component={'main'}>
+        <Box className={classes.wrapper}>
+          <TodoSearch
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+          />
 
-        <Box
-          className={
-            !loading && !searchedTodos?.length ? (
-              classes.taskResult + " " + classes.taskResultNoitem
-            ) : (
-              classes.taskResult
-            )
-          }
-        >
-          {searchedTodos?.length === 0 ? (
-            <Typography className={classes.taskResultParagraph} component={'p'}>
-              {error && <>Hubo un <strong>error</strong>...</>}
-              {loading && <>Cargando <strong>Tareas</strong>...</>}
-              {(!loading && !searchedTodos?.length) && <>Todavia no hay <strong>tareas</strong> disponibles, prueba añadir una.</>}
-            </Typography>
-          ) : (
-            <TodoCounter
-              totalTodos={totalTodos}
-              completedTodos={completedTodos}
-            />
-          )}
-
-          {loading ? (
-            <>
-              <TodoList>
-                 <TodoItem
-                   loading={loading}
-                 />
-              </TodoList>
-            </>
-          ) : (
-            <>
-              {!loading && !searchedTodos?.length ? (
-                <></>
+          <Box
+            className={
+              !loading && !searchedTodos?.length ? (
+                classes.taskResult + " " + classes.taskResultNoitem
               ) : (
-                <TodoList>
-                  {searchedTodos.map((todo, idx) => (
-                    <TodoItem
-                      key={todo?.text + idx}
-                      text={todo?.text}
-                      completed={todo?.completed}
-                      onComplete={() => completeTodo(todo?.text)}
-                      onDelete={() => deleteTodo(todo?.text)}
-                    />
-                  ))}
-                </TodoList>
-              )}
-            </>
-          )}
-        </Box>
+                classes.taskResult
+              )
+            }
+          >
+            {searchedTodos?.length === 0 ? (
+              <Typography className={classes.taskResultParagraph} component={'p'}>
+                {error && <>Hubo un <strong>error</strong>...</>}
+                {loading && <>Cargando <strong>Tareas</strong>...</>}
+                {(!loading && !searchedTodos?.length) && <>Todavia no hay <strong>tareas</strong> disponibles, prueba añadir una.</>}
+              </Typography>
+            ) : (
+              <TodoCounter
+                totalTodos={totalTodos}
+                completedTodos={completedTodos}
+              />
+            )}
 
-        <AddTodoModal
-          openModal={openModal}
-          setOpenModal={setOpenModal}
-          addTodo={addTodo}
-        />
+            {loading ? (
+              <>
+                <TodoList>
+                  <TodoItem
+                    loading={loading}
+                  />
+                </TodoList>
+              </>
+            ) : (
+              <>
+                {!loading && !searchedTodos?.length ? (
+                  <></>
+                ) : (
+                  <TodoList>
+                    {searchedTodos.map((todo, idx) => (
+                      <TodoItem
+                        key={todo?.text + idx}
+                        text={todo?.text}
+                        completed={todo?.completed}
+                        onComplete={() => completeTodo(todo?.text)}
+                        onDelete={() => deleteTodo(todo?.text)}
+                      />
+                    ))}
+                  </TodoList>
+                )}
+              </>
+            )}
+          </Box>
+
+          <AddTodoModal
+            openModal={openModal}
+            setOpenModal={setOpenModal}
+            addTodo={addTodo}
+          />
+        </Box>
       </Box>
-    </Box>
 
       <Footer />
     </Box>
