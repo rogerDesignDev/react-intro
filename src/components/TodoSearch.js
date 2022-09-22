@@ -78,6 +78,11 @@ const useStyles = makeStyles((theme) => ({
       '&:focus': {
         fontWeight: 600,
       },
+      '&:disabled': {
+        '&:hover, &:focus': {
+          borderColor: globalVars.gray,
+        },
+      }
     },
   },
   inputValue: {
@@ -105,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
   },
  }));
 
-function TodoSearch({ searchValue, setSearchValue, searchResult }) {
+function TodoSearch({ searchValue, setSearchValue, searchResult, loading }) {
   const classes = useStyles();
 
   const handleSearch = (e) => {
@@ -148,6 +153,7 @@ function TodoSearch({ searchValue, setSearchValue, searchResult }) {
             }
             onChange={handleSearch}
             value={searchValue}
+            disabled={loading}
           />
           {searchValue !== '' && (
             <IconButton

@@ -14,6 +14,7 @@ import { TodoList } from 'src/components/TodoList';
 import { TodoItem } from 'src/components/TodoItem';
 import { AddTodoModal } from 'src/components/AddTodoModal';
 import { Footer } from "src/components/Footer";
+import { ChangeAlertWithStorageListener } from "src/components/ChangeAlertModal";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -118,6 +119,7 @@ function HomeView() {
     searchValue,
     setSearchValue,
     addTodo,
+    sincronizeTodos,
   } = useTodos();
 
   return (
@@ -130,6 +132,7 @@ function HomeView() {
             searchValue={searchValue}
             setSearchValue={setSearchValue}
             searchResult={searchedTodos}
+            loading={loading}
           />
 
           <Box
@@ -188,6 +191,10 @@ function HomeView() {
             )}
           </Box>
 
+          <ChangeAlertWithStorageListener
+            sincronize={sincronizeTodos}
+          />
+
           <AddTodoModal
             openModal={openModal}
             setOpenModal={setOpenModal}
@@ -196,7 +203,9 @@ function HomeView() {
         </Box>
       </Box>
 
+
       <Footer />
+
     </Box>
   );
 }
