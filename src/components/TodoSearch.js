@@ -105,11 +105,11 @@ const useStyles = makeStyles((theme) => ({
   },
  }));
 
-function TodoSearch({ searchValue, setSearchValue }) {
+function TodoSearch({ searchValue, setSearchValue, searchResult }) {
   const classes = useStyles();
 
   const handleSearch = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
 
     const searchWord = e.target.value;
     setSearchValue(searchWord);
@@ -132,10 +132,10 @@ function TodoSearch({ searchValue, setSearchValue }) {
         <Box className={classes.search}>
           <InputBase
             className={
-              searchValue?.length === 0 ? (
+              searchResult?.length === 0 ? (
                 classes.input
               ) : searchValue === '' ? (
-                <></>
+                classes.input
               ) : (
                 classes.input + " " + classes.inputValue
               )
@@ -159,7 +159,9 @@ function TodoSearch({ searchValue, setSearchValue }) {
           )}
         </Box>
 
-        {searchValue === '' ? (
+        {searchResult.length === 0 ? (
+          <></>
+        ) : searchValue === '' ? (
           <></>
         ) : (
           <Box className={classes.result}>

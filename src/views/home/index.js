@@ -129,6 +129,7 @@ function HomeView() {
           <TodoSearch
             searchValue={searchValue}
             setSearchValue={setSearchValue}
+            searchResult={searchedTodos}
           />
 
           <Box
@@ -144,7 +145,12 @@ function HomeView() {
               <Typography className={classes.taskResultParagraph} component={'p'}>
                 {error && <>Hubo un <strong>error</strong>...</>}
                 {loading && <>Cargando <strong>Tareas</strong>...</>}
-                {(!loading && !searchedTodos?.length) && <>Todavia no hay <strong>tareas</strong> disponibles, prueba añadir una.</>}
+
+                {searchedTodos?.length === 0 && searchValue?.length >= 1 ? (
+                  <><strong>"{searchValue}"</strong> esta palabra no coincide con ningún resultado.</>
+                ) : (
+                  (!loading && !searchedTodos?.length) && <>Todavia no hay <strong>tareas</strong> disponibles, prueba añadir una.</>
+                )}
               </Typography>
             ) : (
               <TodoCounter
