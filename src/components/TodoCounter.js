@@ -1,10 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import {
   Typography,
 } from "@mui/material";
 import { makeStyles } from '@mui/styles';
-
-import { TodoContext } from 'src/context';
 
 const useStyles = makeStyles((theme) => ({
   root : {
@@ -20,13 +18,8 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const TodoCounter = () => {
+const TodoCounter = ({ totalTodos, completedTodos }) => {
   const classes = useStyles();
-
-  const {
-    totalTodos,
-    completedTodos,
-  } = useContext(TodoContext);
 
   return (
     <Typography className={classes.root} component={'h2'}>

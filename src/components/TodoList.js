@@ -21,13 +21,13 @@ const useStyles = makeStyles((theme) => ({
 
  }));
 
-function TodoList(props) {
+function TodoList({ children }) {
   const classes = useStyles();
 
   return (
     <Box className={classes.root}>
       <Box className={classes.list} component={'ul'}>
-        {props.children}
+        {children}
       </Box>
     </Box>
   );

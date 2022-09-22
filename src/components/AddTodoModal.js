@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import {
   ButtonBase,
   alpha,
@@ -12,7 +12,6 @@ import {
 import { makeStyles } from '@mui/styles';
 import globalVars from 'src/theme/globalVars.module.scss';
 
-import { TodoContext } from 'src/context';
 import { IconClose } from './icons/IconClose';
 
  const useStyles = makeStyles((theme) => ({
@@ -145,24 +144,19 @@ import { IconClose } from './icons/IconClose';
   }
  }));
 
-function AddTodoModal({ open, setOpen }) {
+function AddTodoModal({ openModal, setOpenModal, addTodo }) {
   const classes = useStyles();
   const [newTodoValue, setNewTodoValue] = useState('');
-
-  const {
-    addTodo,
-    setOpenModal,
-  } = useContext(TodoContext);
 
   const [scroll, setScroll] = React.useState('paper');
 
   const handleClickOpen = (scrollType) => () => {
-    setOpen(true);
+    setOpenModal(true);
     setScroll(scrollType);
   }
 
   const handleClose = () => {
-    setOpen(false);
+    setOpenModal(false);
   }
 
   const onChange = (event) => {
@@ -200,7 +194,7 @@ function AddTodoModal({ open, setOpen }) {
           root: classes.diagoScrollPaper,
         }
       }}
-      open={open}
+      open={openModal}
       scroll={scroll}
       aria-labelledby="task-dialog-title"
       aria-describedby="task-dialog-description"

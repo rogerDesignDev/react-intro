@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import {
   Box,
   Typography,
@@ -10,7 +10,6 @@ import {
 import { makeStyles } from '@mui/styles';
 import globalVars from 'src/theme/globalVars.module.scss';
 
-import { TodoContext } from 'src/context';
 import { IconCheckbox } from './icons/IconCheckbox';
 import { IconCheckboxChecked } from './icons/IconCheckboxChecked';
 import { IconDelete } from './icons/IconDelete';
@@ -87,17 +86,13 @@ const useStyles = makeStyles((theme) => ({
   }
  }));
 
-function TodoItem(props) {
+function TodoItem({ completed, loading, onComplete, text, onDelete, children }) {
   const classes = useStyles();
-
-  const {
-    loading,
-  } = useContext(TodoContext);
 
   return (
     <Box
       className={
-        props?.completed
+        completed
           ? classes.item + " " + classes.itemCompleted
           : classes.item
       }
@@ -113,27 +108,27 @@ function TodoItem(props) {
         <>
           <ButtonBase
             className={classes.button}
-            onClick={props?.onComplete}
+            onClick={onComplete}
           >
-            {props.completed === true
+            {completed === true
               ? <IconCheckboxChecked className={classes.iconCheckboxChecked} />
               : <IconCheckbox className={classes.iconCheckbox} />}
           </ButtonBase>
 
           <Typography className={classes.paragrapy}>
-            {props?.text}
+            {text}
           </Typography>
 
           <IconButton
             className={classes.delete}
-            onClick={props?.onDelete}
+            onClick={onDelete}
           >
             <IconDelete className={classes.IconDelete} />
           </IconButton>
         </>
       )}
 
-      {props?.children}
+      {children}
     </Box>
   );
 }

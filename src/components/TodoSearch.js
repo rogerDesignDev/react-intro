@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import {
   Box,
   Typography,
@@ -9,7 +9,6 @@ import {
 import { makeStyles } from '@mui/styles';
 import globalVars from 'src/theme/globalVars.module.scss';
 
-import { TodoContext } from 'src/context';
 import Background from 'src/assets/task.svg';
 import { IconSearch } from './icons/IconSearch';
 import { IconClose } from './icons/IconClose';
@@ -106,13 +105,8 @@ const useStyles = makeStyles((theme) => ({
   },
  }));
 
-function TodoSearch() {
+function TodoSearch({ searchValue, setSearchValue }) {
   const classes = useStyles();
-
-  const {
-    searchValue,
-    setSearchValue,
-  } = useContext(TodoContext);
 
   const handleSearch = (e) => {
     console.log(e.target.value);
